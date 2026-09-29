@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PASTE 2026 Poster — AI Review</title>
+<style>
+  :root{--mm:3.7795275591px; --blue:#004ba8; --blue-dark:#003a7a; --accent:#e8750a}
+  *{box-sizing:border-box}
+  body{margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+  header{position:sticky;top:0;z-index:5;background:#0f172a;border-bottom:1px solid #1e293b;
+    padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  header .t{font-size:15px;font-weight:600}
+  header a{color:#67e8f9;text-decoration:none;font-size:13px;border:1px solid #0e7490;padding:6px 12px;border-radius:8px}
+  #stage{padding:12px 0 0}
+  #canvas{transform-origin:top center;margin:0 auto}
+  iframe{border:0;background:#fff;box-shadow:0 0 50px rgba(0,0,0,.55)}
+  /* ---- review section ---- */
+  #review{margin:0 auto;max-width:960px;padding:16px 18px 60px}
+  .togglebar{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;
+    background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:10px;padding:14px 16px}
+  .togglebar h2{margin:0;font-size:17px;color:#fff}
+  .togglebar .sub{margin:0;font-size:12.5px;color:#c3d7ee}
+  .togglebar .chev{margin-left:auto;font-size:18px;color:#fff;transition:transform .2s}
+  .panel{background:#111827;border:1px solid #1e293b;border-top:0;border-radius:0 0 10px 10px;padding:18px;display:none}
+  .panel.open{display:block}
+  .note{font-size:13px;color:#94a3b8;margin:0 0 16px}
+  .prio{margin:0 0 16px;border-left:4px solid var(--accent);padding-left:12px}
+  .prio h3{margin:0 0 6px;font-size:15px;color:#fdba74}
+  .item{display:flex;gap:8px;margin:7px 0;font-size:14px;line-height:1.45}
+  .item b{color:#e2e8f0}
+  .who{color:#64748b;font-size:12px;font-style:italic;margin-left:auto;white-space:nowrap}
+  details{margin:8px 0;border:1px solid #1e293b;border-radius:8px;padding:10px 12px;background:#0b1220}
+  summary{cursor:pointer;font-weight:600;font-size:14px;color:#67e8f9}
+  details pre{white-space:pre-wrap;font-size:12.5px;line-height:1.5;color:#cbd5e1;margin:10px 0 0}
+</style>
+</head>
+<body>
+<header>
+  <div class="t">PASTE 2026 Poster — AI Model Review</div>
+  <div style="display:flex;gap:8px">
+    <a href="/paste2026-poster/">← toggle page</a>
+    <a href="/paste2026-poster/v2.html">v2 poster</a>
+  </div>
+</header>
+
+<div id="stage"><div id="canvas"><iframe id="p" src="v2.html" title="poster"></iframe></div></div>
+
+<div id="review">
+  <div class="togglebar" onclick="toggle()">
+    <div>
+      <h2>AI Review — Improvement Suggestions</h2>
+      <p class="sub">Consolidated from 6 vision models · click to expand / collapse</p>
+    </div>
+    <span class="chev" id="chev">▾</span>
+  </div>
+  <div class="panel" id="panel">
+    <p class="note">Six models independently critiqued the poster (GPT-4o, GPT-4o-mini, Gemini-3-Flash, Qwen3-VL, DeepSeek-vision, GLM-4.6V). Below is the deduplicated, prioritized consensus. Full per-model feedback is at the bottom.</p>
+
+    <div class="prio"><h3>Priority 1 — Theme &amp; impact (the competition's core)</h3>
+      <div class="item"><b>1. Fill the <code>[X]%</code> / <code>[M]</code> placeholders</b> with real or clearly "promised" data. Placeholders read as unfinished and are the #1 judge red-flag.<span class="who">deepseek · gemini-3 · GPT-4o</span></div>
+      <div class="item"><b>2. Make the three “Trans-” pillars visually prominent.</b> Add icon/colour badges or a triad near the title (Transdisciplinary · Transectoral · Transcultural) instead of burying them in small text tags.<span class="who">gemini-3 · qwen-vl · glm · deepseek · GPT-4o</span></div>
+    </div>
+
+    <div class="prio"><h3>Priority 2 — Visual impact &amp; clarity</h3>
+      <div class="item"><b>3. Enlarge the AI “digital twin” simulation graphic</b> and add labelled callouts (water volume · pressure · nozzle) — it's the project's unique innovation but is too small to read.<span class="who">deepseek · gemini-3</span></div>
+      <div class="item"><b>4. Add a secondary accent colour</b> (orange or teal) for key terms/highlights — the all-blue palette is safe but monotone.<span class="who">GPT-4o · qwen-vl · glm · gemini-3</span></div>
+      <div class="item"><b>5. Simplify the flowchart</b> — fewer words per box, cleaner linear flow.<span class="who">gemini-3 · glm</span></div>
+      <div class="item"><b>6. Reduce text density</b> — bullets over long paragraphs, more whitespace between sections.<span class="who">qwen-vl · glm · GPT-4o-mini</span></div>
+      <div class="item"><b>7. Standardise typography</b> — one sans-serif, clear heading hierarchy, body ≥24pt for A0 distance.<span class="who">glm · deepseek · GPT-4o</span></div>
+    </div>
+
+    <div class="prio"><h3>Priority 3 — Polish</h3>
+      <div class="item"><b>8. Swap any soft/low-res photos</b> for sharp action shots and add one-line captions.<span class="who">qwen-vl</span></div>
+      <div class="item"><b>9. Reconsider the QR code</b> — models disagree (top-right for visibility vs bottom-right to declutter the footer).<span class="who">GPT-4o · qwen-vl</span></div>
+      <div class="item"><b>10. Trim references to ~5</b> and add a one-line “Conclusion / Future work”.<span class="who">deepseek · GPT-4o-mini</span></div>
+    </div>
+
+    <hr style="border-color:#1e293b;margin:18px 0">
+
+    <details><summary>Full review — GPT-4o</summary><pre>
+1. Improve information hierarchy (numbering / subtle backgrounds on subsections).
+2. Add whitespace between elements (esp. Methodology ↔ Findings).
+3. Refine typography — larger body, bold key terms, sentence-case phrases.
+4. Reduce blue-box overuse (monotony).
+5. Enhance visuals — larger, more cohesive graphics (physics / AI mockups).
+6. Clarify theme alignment with explicit trans-/cross- statements + a stakeholder flow.
+7. Use an accent colour (green/orange) for emphasis.
+8. Move the QR code to the top-right.
+</pre></details>
+
+    <details><summary>Full review — GPT-4o-mini</summary><pre>
+1. Enlarge + bold the title.
+2. Improve colour contrast (darker body text).
+3. Group related sections for flow.
+4. Convert paragraphs to bullets.
+5. Add subheadings with larger/bolder fonts.
+6. Add infographics/diagrams.
+7. Add a "Conclusion / Future Work" section.
+8. Standardise image captions.
+</pre></details>
+
+    <details><summary>Full review — Gemini-3-Flash</summary><pre>
+1. Reconfigure to a vertical columnar flow (Problem → Method → Collaboration → Impact).
+2. Enlarge the hero visual (launch / building photo) into the top third.
+3. Replace [X]% and [M] placeholders with real data.
+4. Visually amplify the "Trans-" pillars with icons/colour badges.
+5. Simplify the flowchart + enlarge the simulation screenshot.
+6. Increase header contrast with a vibrant accent (orange/teal).
+</pre></details>
+
+    <details><summary>Full review — Qwen3-VL</summary><pre>
+1. Reposition & enlarge the main title (top-centre, 48–54pt).
+2. Simplify palette to 2–3 colours + unify section headers.
+3. Add whitespace, reduce paragraph density (bullets).
+4. Highlight "transcultural/transectoral" with icons (🌐 / 🤝).
+5. Replace low-res photos with sharp action shots + captions.
+6. Move QR + footer to bottom-right.
+</pre></details>
+
+    <details><summary>Full review — DeepSeek-vision</summary><pre>
+1. Replace placeholders with pilot data (e.g., "n≈120, 2 launches").
+2. Turn the Significance paragraph into a 3-step arrow diagram (HK → bilingual STEM → Jiangxi).
+3. Enlarge + caption the AI simulation mock-up (min 15×15 cm) with callouts.
+4. Standardise typography (Lato headings / Open Sans body, ≥24pt, 1.15 spacing).
+5. Rebalance whitespace in the lower half; trim references to 5.
+6. Add a "Transcultural ↔ Transectoral ↔ Transdisciplinary" triad near the title.
+</pre></details>
+
+    <details><summary>Full review — GLM-4.6V</summary><pre>
+1. Condense the Significance paragraph.
+2. Unify typography (one sans-serif, 2–3 weights, clear size hierarchy).
+3. Group the "Trans-" keywords into one coloured strip.
+4. Fewer, larger images aligned to text.
+5. Add a warm accent (orange) for theme keywords.
+6. Simplify the flowchart (horizontal, fewer words).
+</pre></details>
+  </div>
+</div>
+
+<script>
+const MM=3.7795275591, W=841*MM, H=1189*MM;
+const p=document.getElementById('p'), c=document.getElementById('canvas');
+p.style.width=W+'px'; p.style.height=H+'px';
+function fit(){
+  const s=Math.min((window.innerWidth-24)/W, 1.25);
+  c.style.transform='scale('+s+')';
+  c.style.width=(W*s)+'px';
+  c.style.height=(H*s)+'px';
+}
+window.addEventListener('resize',fit); fit();
+function toggle(){
+  const panel=document.getElementById('panel');
+  const chev=document.getElementById('chev');
+  panel.classList.toggle('open');
+  chev.textContent = panel.classList.contains('open') ? '▴' : '▾';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PASTE 2026 — Two-Stage Water Rocket Posters</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+  .wrap{max-width:1240px;margin:0 auto;padding:36px 22px 70px}
+  h1{font-size:30px;margin:0;line-height:1.25}
+  .sub{color:#94a3b8;margin:10px 0 0;font-size:16px;line-height:1.5}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-top:32px}
+  .card{background:#111827;border:1px solid #1e293b;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;
+    transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:#0e7490}
+  .thumb{position:relative;background:#0b1220}
+  .thumb img{width:100%;height:200px;object-fit:cover;object-position:top;display:block}
+  .badge{position:absolute;top:10px;left:10px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    background:rgba(15,23,42,.85);color:#67e8f9;padding:4px 9px;border-radius:6px}
+  .badge.latest{color:#fbbf24}
+  .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+  h2{font-size:21px;margin:0}
+  .card p{color:#94a3b8;font-size:14.5px;line-height:1.55;margin:0;flex:1}
+  .links{display:flex;gap:10px}
+  .links a{flex:1;text-align:center;text-decoration:none;font-size:14px;padding:10px 12px;border-radius:9px;border:1px solid #334155;color:#cbd5e1}
+  .links a.view{background:#0e7490;border-color:#0e7490;color:#fff}
+  .links a:hover{opacity:.85}
+  .card.review{border-style:dashed}
+</style></head>
+<body>
+<div class="wrap">
+  <h1>PASTE 2026 — Two-Stage Water Rocket &amp; Its Simulation Platform</h1>
+  <p class="sub">Student poster · Zian Zheng · Shijie Wu · Yuxi Jia · Lucia Luo · HKBU Sustainable Service Education Group</p>
+  <div class="grid">
+    <div class="card">
+      <div class="thumb"><img src="assets/thumb_v4.png" alt="v4"><div class="badge latest">v4 · latest</div></div>
+      <div class="body">
+        <h2>Grid + stepper (print-ready)</h2>
+        <p>Background → Objectives → Methodology → Findings. Simulation-to-experiment narrative, real photos, all images ≥150 dpi.</p>
+        <div class="links"><a class="view" href="v4.html">View</a><a href="poster_v4.pdf" download>PDF</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><img src="assets/thumb_v3.png" alt="v3"><div class="badge">v3</div></div>
+      <div class="body">
+        <h2>Grid + stepper</h2>
+        <p>Same layout as v4, earlier build (a couple of photos below 150 dpi).</p>
+        <div class="links"><a class="view" href="v3.html">View</a><a href="poster_v3.pdf" download>PDF</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><img src="assets/thumb_v2.png" alt="v2"><div class="badge">v2</div></div>
+      <div class="body">
+        <h2>Deep blue + photos</h2>
+        <p>Linear top-to-bottom layout with real photos and QR footer.</p>
+        <div class="links"><a class="view" href="v2.html">View</a><a href="poster_v2.pdf" download>PDF</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><img src="assets/thumb_v1.png" alt="v1"><div class="badge">v1</div></div>
+      <div class="body">
+        <h2>Indigo + AI images</h2>
+        <p>The original version with AI-generated imagery.</p>
+        <div class="links"><a class="view" href="v1.html">View</a><a href="poster.pdf" download>PDF</a></div>
+      </div>
+    </div>
+    <div class="card review">
+      <div class="thumb"><div class="badge">review</div></div>
+      <div class="body">
+        <h2>AI model review</h2>
+        <p>Improvement suggestions consolidated from six vision models (GPT-4o, Gemini, Qwen, DeepSeek, GLM…).</p>
+        <div class="links"><a class="view" href="review.html">Open</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Two-Stage Water Rocket and Its Simulation Platform — PASTE 2026</title>
+<style>
+  @page { size: 841mm 1189mm; margin: 0; }
+  :root {
+    --indigo: #4f46e5;
+    --indigo-dark: #3730a3;
+    --cyan: #0e7490;
+    --ink: #1e293b;
+    --muted: #475569;
+    --line: #cbd5e1;
+    --bg: #f8fafc;
+    --accent-soft: #eef2ff;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    width: 841mm; height: 1189mm;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .poster {
+    width: 841mm; height: 1189mm;
+    padding: 16mm 20mm;
+    display: flex; flex-direction: column; gap: 8mm;
+    background: white;
+  }
+
+  /* ---- header ---- */
+  .header {
+    display: flex; align-items: stretch; gap: 10mm;
+    border-bottom: 3mm solid var(--indigo);
+    padding-bottom: 8mm;
+  }
+  .header .titles { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
+  .kicker {
+    font-size: 14pt; font-weight: 700; letter-spacing: 2pt; text-transform: uppercase;
+    color: var(--cyan); margin-bottom: 4mm;
+  }
+  h1 { font-size: 50pt; line-height: 1.05; margin: 0; color: var(--indigo-dark); }
+  .theme {
+    font-size: 17pt; font-weight: 700; color: var(--indigo); margin-top: 4mm;
+  }
+  .tagline { font-size: 19pt; color: var(--muted); margin-top: 3mm; font-weight: 400; }
+  .authors { font-size: 17pt; color: var(--ink); margin-top: 5mm; }
+  .affil { font-size: 13pt; color: var(--muted); margin-top: 2mm; }
+  .header .hero { flex: 0 0 46mm; display: flex; align-items: center; }
+  .header .hero img { width: 46mm; height: 46mm; object-fit: cover; border-radius: 4mm; border: 1mm solid var(--line); }
+
+  /* ---- section scaffold ---- */
+  .section { display: flex; flex-direction: column; }
+  .section h2 {
+    font-size: 24pt; margin: 0 0 4mm 0; color: white; background: var(--indigo);
+    padding: 3mm 5mm; border-radius: 2mm; letter-spacing: 0.5pt;
+  }
+  .section .body { padding: 3mm 2mm 0; }
+  p, li { font-size: 16pt; line-height: 1.45; color: var(--ink); margin: 0 0 3mm 0; }
+  ul { margin: 0; padding-left: 8mm; }
+  li { margin-bottom: 2.5mm; }
+  .lead { font-size: 17.5pt; }
+  .muted { color: var(--muted); }
+  .tag {
+    display: inline-block; font-weight: 700; color: var(--indigo-dark);
+    background: var(--accent-soft); border-radius: 1.5mm; padding: 0.5mm 3mm; margin-right: 2mm;
+  }
+
+  /* ---- column helpers ---- */
+  .cols { display: flex; gap: 8mm; }
+  .cols > div { flex: 1 1 0; }
+  .cols3 { display: flex; gap: 8mm; }
+  .cols3 > div { flex: 1 1 0; }
+
+  .card {
+    border: 1mm solid var(--line); border-radius: 3mm; padding: 5mm;
+    background: var(--bg);
+  }
+  .card h3 { font-size: 17pt; margin: 0 0 2.5mm; color: var(--cyan); }
+  .card p, .card li { font-size: 14.5pt; }
+
+  /* ---- methodology ---- */
+  .method { display: flex; gap: 8mm; }
+  .method .flow { flex: 1.15 1 0; display: flex; flex-direction: column; align-items: center; }
+  .method .flow img { height: 240mm; width: auto; max-width: 100%; }
+  .method .desc { flex: 1 1 0; }
+
+  /* ---- findings ---- */
+  .testimony { display: flex; gap: 6mm; margin-top: 3mm; }
+  .quote {
+    flex: 1 1 0; border-left: 3mm solid var(--cyan); padding-left: 5mm;
+    font-style: italic; color: var(--ink);
+  }
+  .quote .who { font-style: normal; font-weight: 700; color: var(--cyan); margin-top: 2mm; font-size: 13.5pt; }
+  .findings-img { display: flex; gap: 8mm; align-items: center; margin-top: 4mm; }
+  .findings-img img { width: 52mm; height: 40mm; object-fit: cover; border-radius: 3mm; border: 1mm solid var(--line); }
+
+  /* ---- references ---- */
+  .refs { font-size: 12pt; color: var(--muted); line-height: 1.4; }
+  .refs li { font-size: 12pt; margin-bottom: 1.5mm; }
+  .refs a { color: var(--cyan); text-decoration: none; word-break: break-all; }
+  .ack { margin-top: 3mm; font-size: 13pt; color: var(--muted); }
+
+  .foot {
+    margin-top: auto; text-align: center; font-size: 12pt; color: var(--muted);
+    border-top: 1mm solid var(--line); padding-top: 4mm;
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- ================= HEADER ================= -->
+  <div class="header">
+    <div class="titles">
+      <div class="kicker">PASTE 2026 · Student Poster · Innovation Project</div>
+      <h1>Two-Stage Water Rocket &amp; Its Simulation Platform</h1>
+      <div class="theme">Transcultural &amp; transectoral collaboration in transdisciplinary education</div>
+      <div class="tagline">A bilingual STEM unit bridging physics, engineering and AI — co-delivered across cultures and sectors</div>
+      <div class="authors"><b>Zian Zheng · Shijie Wu · Yuxi Jia · Lucia Luo</b></div>
+      <div class="affil">Hong Kong Baptist University — Sustainable Service Education Group</div>
+    </div>
+    <div class="hero"><img src="assets/hero_banner.png" alt="water rocket launch"></div>
+  </div>
+
+  <!-- ================= SIGNIFICANCE ================= -->
+  <div class="section">
+    <h2>Significance — Why it matters</h2>
+    <div class="body">
+      <div class="sig-row" style="display:flex; gap:8mm; align-items:flex-start;">
+        <div style="flex:1;">
+          <p class="lead" style="margin-bottom:3mm;">How do you teach abstract mechanics to young children across a language and
+            sector boundary? We designed a <b>bilingual (Chinese–English)</b> STEM unit and delivered it as a
+            <b>cross-regional service-learning project</b> — Hong Kong university students teaching
+            primary-school children in mainland China. The water rocket becomes a safe, low-cost “living
+            laboratory” for force, pressure and acceleration.</p>
+        </div>
+        <img src="assets/transcultural.png" alt="cross-region connection"
+             style="width:56mm; height:56mm; object-fit:cover; border-radius:3mm; border:1mm solid var(--line);">
+      </div>
+      <div class="cols">
+        <div>
+          <span class="tag">Transdisciplinary</span>
+          <p>physics (mechanics) × engineering design × computer science (AI) × pedagogy</p>
+        </div>
+        <div>
+          <span class="tag">Transectoral</span>
+          <p>university ↔ primary school ↔ community — education, technology and social service</p>
+        </div>
+        <div>
+          <span class="tag">Transcultural</span>
+          <p>Hong Kong ↔ Jiangxi (Anyuan / Sanbaishan); bilingual delivery and cross-cultural exchange</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= OBJECTIVES ================= -->
+  <div class="section">
+    <h2>Objectives</h2>
+    <div class="body">
+      <div class="cols3">
+        <div class="card">
+          <h3>Knowledge</h3>
+          <p>Students can explain launch principles, pressure vs. air pressure, action–reaction,
+             acceleration and air resistance.</p>
+        </div>
+        <div class="card">
+          <h3>Ability</h3>
+          <p>Students practise <b>hypothesis → test → optimise</b>; variable control; data recording;
+             engineering design.</p>
+        </div>
+        <div class="card">
+          <h3>Transdisciplinary</h3>
+          <p>Model a pedagogy that couples <b>AI simulation</b> with <b>hands-on experiment</b>,
+             transferable to other STEM topics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= APPROACH & METHODOLOGY ================= -->
+  <div class="section">
+    <h2>Approach &amp; Methodology</h2>
+    <div class="body method">
+      <div class="flow">
+        <img src="assets/flowchart.svg" alt="five-lesson methodology flow">
+        <p class="muted" style="font-size:12pt; margin-top:2mm; text-align:center;">
+          Learn → build → simulate → launch → reflect (five lessons, one inquiry loop)</p>
+      </div>
+      <div class="desc">
+        <p>A custom <b>AI simulation platform</b> acts as a <b>pre-launch “digital twin”</b>: students
+           sweep <b>water volume</b>, <b>air pressure</b> and <b>nozzle diameter</b> to predict the
+           optimal launch <i>before</i> the physical test — reducing cost and safety risk while
+           grounding intuition in theory.</p>
+        <p class="muted">Delivered <b>bilingually (Chinese–English)</b> across five scaffolded lessons,
+           co-taught by university students for primary-school learners.</p>
+        <img src="assets/simulation.png" alt="digital-twin simulation panel"
+             style="height:80mm; width:auto; max-width:100%; border-radius:3mm; border:1mm solid var(--line); margin-top:2mm;">
+        <img src="assets/physics_reaction.png" alt="action and reaction force"
+             style="height:52mm; width:auto; max-width:100%; border-radius:3mm; border:1mm solid var(--line); margin-top:2mm;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= KEY FINDINGS & IMPLICATIONS ================= -->
+  <div class="section">
+    <h2>Key Findings &amp; Implications</h2>
+    <div class="body">
+      <div class="cols">
+        <div style="flex:1.3">
+          <p><span class="tag">Anticipated outcomes</span> By the end of the unit, a target of
+             <b>[X]%</b> of learners are expected to explain action–reaction and pressure; simulation
+             predictions will be validated against <b>[M]</b> real launches.</p>
+          <p><span class="tag">Stakeholder impact</span> <b>Learners</b> grasp core mechanics and build
+             inquiry skills; the <b>school &amp; community</b> gain a reusable, low-cost STEM module; we,
+             as <b>facilitators</b>, develop transdisciplinary teamwork and cross-cultural communication.</p>
+          <p><span class="tag">Next steps</span> Map every physics concept one-to-one onto build/launch
+             steps; add academic-standard scenarios; build a student innovation zone to close the loop
+             <b>learn → practise → create</b>.</p>
+        </div>
+        <div style="flex:0 0 60mm; display:flex; flex-direction:column; gap:6mm; justify-content:flex-start;">
+          <img src="assets/students_build.png" alt="students building the rocket"
+               style="width:60mm; height:30mm; object-fit:cover; border-radius:3mm; border:1mm solid var(--line);">
+          <img src="assets/students_launch.png" alt="students launching water rocket"
+               style="width:60mm; height:30mm; object-fit:cover; border-radius:3mm; border:1mm solid var(--line);">
+        </div>
+      </div>
+      <div class="testimony">
+        <div class="quote">
+          “The children connected pressure and force faster than any worksheet ever did.”
+          <div class="who">— Teacher testimony (to be confirmed)</div>
+        </div>
+        <div class="quote">
+          “I learned why my rocket flew higher when I pumped in more air.”
+          <div class="who">— Student testimony (to be confirmed)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= REFERENCES & ACKNOWLEDGEMENT ================= -->
+  <div class="section">
+    <h2>References &amp; Acknowledgement</h2>
+    <div class="body">
+      <ol class="refs">
+        <li>Zacharia, Z. C., &amp; Anderson, O. R. (2003). Interactive computer-based simulation prior
+          to a laboratory inquiry-based experiment on students’ conceptual understanding of physics.
+          <i>American Journal of Physics, 71</i>(6). <a href="https://doi.org/10.1119/1.1566427">doi:10.1119/1.1566427</a></li>
+        <li>Wieman, C., Adams, W. K., &amp; Perkins, K. K. (2008). PhET: Simulations That Enhance Learning.
+          <i>Science, 322</i>(5902). <a href="https://doi.org/10.1126/science.1161948">doi:10.1126/science.1161948</a></li>
+        <li>van Uum, M. S. J., Verhoeff, R. P., &amp; Peeters, M. (2016). Inquiry-based science education:
+          towards a pedagogical framework for primary school teachers. <i>Int. J. Sci. Educ., 38</i>(3).
+          <a href="https://doi.org/10.1080/09500693.2016.1147660">doi:10.1080/09500693.2016.1147660</a></li>
+        <li>Beier, M. E., Kim, M. H., &amp; Saterbak, A. (2018). The effect of authentic project-based
+          learning on attitudes and career aspirations in STEM. <i>J. Res. Sci. Teach., 56</i>(1).
+          <a href="https://doi.org/10.1002/tea.21465">doi:10.1002/tea.21465</a></li>
+        <li>Capraro, R. M., Capraro, M. M., &amp; Morgan, J. R. (2013). <i>STEM Project-Based Learning</i>.
+          Springer. <a href="https://doi.org/10.1007/978-94-6209-143-6">doi:10.1007/978-94-6209-143-6</a></li>
+        <li>Bilén, S. G., Wheeler, T., &amp; Bock, R. G. (2015). Applying 3D printing to model rocketry to
+          enhance learning in undergraduate engineering design. <i>ASEE Annual Conf.</i>
+          <a href="https://doi.org/10.18260/p.24448">doi:10.18260/p.24448</a></li>
+      </ol>
+      <div class="ack"><b>Acknowledgement.</b> We thank our advisors <b>Dr Simon Wang</b> and <b>Dr Nancy Guo</b>,
+        the Hong Kong Baptist University Sustainable Service Education Group, the service-learning / Tin Ka Ping
+        programme, and our partner school.</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    Pacific Asia Summit on Transdisciplinary Education (PASTE) 2026 · 26–27 November 2026 · HKBU ·
+    Theme: Transcultural &amp; Transectoral Collaboration in Transdisciplinary Education
+  </div>
+
+</div>
+</body>
+</html>
